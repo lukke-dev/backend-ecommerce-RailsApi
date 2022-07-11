@@ -3,6 +3,6 @@
 class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
          :confirmable, :trackable
 end 
