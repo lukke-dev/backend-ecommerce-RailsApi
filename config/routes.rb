@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     # scope module: :v2, constraints: ApiContraints.new(version: 2, default: false) do
     # end
   end
+  resources :products
 end

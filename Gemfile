@@ -8,6 +8,12 @@ gem 'pg', '~> 1.1'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem "active_model_serializers", "~> 0.10.13"
 gem "devise_token_auth", "~> 1.2"
+gem "haml-rails", "~> 2.0"
+gem 'sass-rails', '>= 6'
+gem 'simple_form'
+gem 'webpacker', '~> 5.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
 
