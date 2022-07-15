@@ -1,6 +1,8 @@
 .card
   .card-header
     = product.name
+  .card-body 
+    = image_tag product.cover_url, alt: product.name
   .card-body
     = product.description
     = product.price

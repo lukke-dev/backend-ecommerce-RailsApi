@@ -15,6 +15,7 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 5.0'
+gem "aws-sdk-s3", require: false
 gem 'rack-cors'
 
 group :development, :test do
