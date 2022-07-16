@@ -19,6 +19,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'carrierwave-aws', '~> 1.0'
 gem "mini_magick"
 gem 'rack-cors'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -28,6 +29,11 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem "letter_opener", "~> 1.8"
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
