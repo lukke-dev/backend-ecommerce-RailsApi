@@ -2,7 +2,7 @@
   .card-header
     = product.name
   .card-body 
-    = image_tag url_for(product.cover_url), alt: product.name
+    = image_tag product.image_url.url
   .card-body
     = product.description
     = product.price

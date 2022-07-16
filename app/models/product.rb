@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-	has_one_attached :cover_url
+	mount_uploader :image_url, CoverImageUploader
 end
