@@ -60,4 +60,3 @@
 #     # password: "please use keys"
 #   }
 
-server '34.229.206.165', user: 'ubuntu', roles: %w{web app db}
