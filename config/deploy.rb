@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-server '172.31.26.79', port: 22, roles: [:web, :app, :db], primary: true
+server '34.229.206.165', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:Lucas-dos-Santos/backend-ecommerce-RailsApi.git'
 set :application,     'backend-ecommerce'
