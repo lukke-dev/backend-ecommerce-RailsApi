@@ -20,5 +20,5 @@ production:
   encoding: unicode
   database: backend_ecommerce_production
   username: postgres
-  password: <%= ENV['db_password'] %>
+  password: root
   
