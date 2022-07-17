@@ -9,7 +9,7 @@ set :rbenv_ruby,      '3.0.4'
 set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
 
 # If using Digital Ocean's Ruby on Rails Marketplace framework, your username is 'rails'
-set :user,            'deploy'
+set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
