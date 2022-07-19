@@ -14,7 +14,7 @@ gem 'simple_form'
 gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 4.3.9'
 gem 'carrierwave', '~> 2.0'
 gem 'carrierwave-aws', '~> 1.0'
 gem "mini_magick"
