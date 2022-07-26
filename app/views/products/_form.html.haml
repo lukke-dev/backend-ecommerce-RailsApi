@@ -8,6 +8,6 @@
     = f.input :description
     = f.input :price
     = f.input :quantity
-    = f.file_field :image_url
+    = f.file_field :images, multiple: true
   .form-actions
     = f.button :submit

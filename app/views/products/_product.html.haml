@@ -1,14 +1,14 @@
 .card
   .card-header
     = product.name
-  .card-body 
-    = image_tag product.image_url.url
+  - product.images.each do |img| 
+    .card-body
+      = image_tag img.url
   .card-body
     = product.description
     = product.price
     = product.quantity
     = product.price
-    = product.image_url
   .card-footer
     = link_to 'Edit', edit_product_path(product), class: 'btn btn-sm btn-warning'
     = link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'

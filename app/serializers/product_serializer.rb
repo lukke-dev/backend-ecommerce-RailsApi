@@ -3,7 +3,7 @@ class ProductSerializer < ActiveModel::Serializer
   attributes :id, :name, :description, :quantity
 
   attribute :imageUrl do
-    @object.image_url.url
+    @object.images_urls
   end
 
   attribute :price do

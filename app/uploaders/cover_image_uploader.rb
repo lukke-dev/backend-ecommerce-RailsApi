@@ -2,7 +2,7 @@ class CoverImageUploader < CarrierWave::Uploader::Base
   storage :aws
 
   def store_dir
-    "uploads/images/#{model.id}"
+    "uploads/images/"
   end
 
   def extension_allowlist

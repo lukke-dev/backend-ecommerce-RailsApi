@@ -8,7 +8,6 @@
       %th Price
       %th Quantity
       %th Price
-      %th ImageUrl
       %th
       %th
       %th
@@ -22,7 +21,6 @@
         %td= product.quantity
         %td= product.price
         %td
-          = image_tag product.image_url.url, width: 200, height: 250
         %td= link_to 'Show', product
         %td= link_to 'Edit', edit_product_path(product)
         %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
