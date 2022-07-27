@@ -6,10 +6,6 @@ class ProductSerializer < ActiveModel::Serializer
     @object.images_urls
   end
 
-  def price
-    number_to_currency(@object.price, precision: 2, unit: "R$")
-  end
-
   def category
     @object.category.name
   end
