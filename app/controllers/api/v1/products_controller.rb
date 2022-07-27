@@ -3,7 +3,7 @@ class Api::V1::ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
+    @products = Product.includes(:category).all
 
     render json: @products
   end
@@ -39,9 +39,8 @@ class Api::V1::ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.includes(:category).find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

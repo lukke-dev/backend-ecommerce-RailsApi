@@ -8,6 +8,7 @@
       %th Price
       %th Quantity
       %th Price
+      %th Category
       %th
       %th
       %th
@@ -20,6 +21,7 @@
         %td= product.price
         %td= product.quantity
         %td= product.price
+        %td= product.category.name
         %td
         %td= link_to 'Show', product
         %td= link_to 'Edit', edit_product_path(product)

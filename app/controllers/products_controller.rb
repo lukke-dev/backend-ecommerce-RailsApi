@@ -1,21 +1,17 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :update, :destroy, :edit]
-
-  # GET /products
+  before_action :set_product, only: %i[ show update destroy edit ]
+  before_action :set_categories, only: %i[ new edit create ]
   def index
-    @products = Product.all
+    @products = Product.all.includes(:category)
   end
 
-  # GET /products/1
-  def show
-  end
+  def show; end
 
   def new
     @product = Product.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @product = Product.new(product_params)
@@ -43,10 +39,14 @@ class ProductsController < ApplicationController
 
   private
     def set_product
-      @product = Product.find(params[:id])
+      @product = Product.includes(:category).find(params[:id])
+    end
+
+    def set_categories
+      @categories = Category.all
     end
 
     def product_params
-      params.require(:product).permit(:name, :description, :price, :quantity, {images: []})
+      params.require(:product).permit(:name, :description, :price, :quantity, {images: []}, :category_id)
     end
 end

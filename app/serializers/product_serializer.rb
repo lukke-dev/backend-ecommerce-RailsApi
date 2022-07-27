@@ -1,12 +1,16 @@
 class ProductSerializer < ActiveModel::Serializer
   include ActionView::Helpers::NumberHelper
-  attributes :id, :name, :description, :quantity
+  attributes :id, :name, :description, :quantity, :images, :price, :category
 
-  attribute :imageUrl do
+  def images
     @object.images_urls
   end
 
-  attribute :price do
+  def price
     number_to_currency(@object.price, precision: 2, unit: "R$")
+  end
+
+  def category
+    @object.category.name
   end
 end
